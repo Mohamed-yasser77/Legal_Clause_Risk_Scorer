@@ -1,0 +1,132 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Courier+Prime:wght@400;700&display=swap');
+  .lb-wrap { background: #0a0a0a; color: #f0ede6; font-family: 'Courier Prime', monospace; border: 2px solid #f0ede6; }
+  .lb-nav { border-bottom: 2px solid #f0ede6; display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; }
+  .lb-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 900; letter-spacing: -0.5px; }
+  .lb-nav-links { display: flex; gap: 28px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .lb-hero { padding: 60px 28px 48px; border-bottom: 2px solid #f0ede6; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; }
+  .lb-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #e8291a; margin-bottom: 16px; }
+  .lb-h1 { font-family: 'Playfair Display', serif; font-size: 52px; line-height: 1.0; font-weight: 900; margin: 0 0 24px; }
+  .lb-sub { font-size: 12px; line-height: 1.8; color: #a09890; max-width: 320px; }
+  .lb-cta-group { display: flex; gap: 12px; margin-top: 32px; }
+  .lb-btn-primary { background: #e8291a; color: #f0ede6; border: none; padding: 14px 28px; font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; }
+  .lb-btn-secondary { background: transparent; color: #f0ede6; border: 2px solid #f0ede6; padding: 14px 28px; font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; }
+  .lb-hero-right { border: 2px solid #2a2a2a; padding: 24px; }
+  .lb-stat-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #222; }
+  .lb-stat-row:last-child { border-bottom: none; }
+  .lb-stat-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #a09890; }
+  .lb-stat-val { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; }
+  .lb-stat-val.red { color: #e8291a; }
+  .lb-upload { border: 2px dashed #333; margin: 0 28px; padding: 40px; text-align: center; }
+  .lb-upload-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .lb-upload-sub { font-size: 11px; color: #a09890; letter-spacing: 1px; }
+  .lb-section { padding: 40px 28px; }
+  .lb-section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #e8291a; margin-bottom: 24px; border-bottom: 1px solid #222; padding-bottom: 8px; }
+  .lb-features { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+  .lb-feat { border: 1px solid #222; padding: 20px; }
+  .lb-feat-num { font-family: 'Playfair Display', serif; font-size: 36px; color: #333; font-weight: 900; }
+  .lb-feat-title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin: 8px 0 6px; }
+  .lb-feat-desc { font-size: 11px; color: #a09890; line-height: 1.6; }
+  .lb-ticker { background: #e8291a; padding: 8px 28px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; overflow: hidden; }
+  .lb-badge { display: inline-block; font-size: 9px; letter-spacing: 2px; border: 1px solid #e8291a; color: #e8291a; padding: 3px 8px; margin-right: 8px; text-transform: uppercase; }
+</style>
+<div class="lb-wrap">
+  <div class="lb-nav">
+    <div class="lb-logo">LEXSCORE</div>
+    <div class="lb-nav-links">
+      <span>Features</span>
+      <span>Pricing</span>
+      <span>Docs</span>
+      <span style="color:#e8291a;">Try Now →</span>
+    </div>
+  </div>
+  <div class="lb-ticker">
+    ★ CONTRACT RISK INTELLIGENCE — CLAUSE-BY-CLAUSE ANALYSIS — POWERED BY LEGALBERT — INSTANT RESULTS ★ &nbsp;&nbsp;&nbsp; ★ HIGH RISK CLAUSES FLAGGED IN SECONDS — PROTECT YOUR INTERESTS ★
+  </div>
+  <div class="lb-hero">
+    <div>
+      <div class="lb-eyebrow">Legal Intelligence Platform</div>
+      <div class="lb-h1">Know Your Risk.<br>Before You Sign.</div>
+      <div class="lb-sub">Upload any legal contract and receive clause-by-clause risk analysis. Three-tier classification: High, Medium, Low — with confidence scoring.</div>
+      <div class="lb-cta-group">
+        <button class="lb-btn-primary">Analyze Contract</button>
+        <button class="lb-btn-secondary">View Demo</button>
+      </div>
+    </div>
+    <div>
+      <div class="lb-hero-right">
+        <div class="lb-stat-row">
+          <span class="lb-stat-label">Clauses Analyzed</span>
+          <span class="lb-stat-val">2,847</span>
+        </div>
+        <div class="lb-stat-row">
+          <span class="lb-stat-label">High Risk Found</span>
+          <span class="lb-stat-val red">14</span>
+        </div>
+        <div class="lb-stat-row">
+          <span class="lb-stat-label">Risk Score</span>
+          <span class="lb-stat-val red">87 / 100</span>
+        </div>
+        <div class="lb-stat-row">
+          <span class="lb-stat-label">Model Confidence</span>
+          <span class="lb-stat-val">94.2%</span>
+        </div>
+        <div class="lb-stat-row">
+          <span class="lb-stat-label">Processing Time</span>
+          <span class="lb-stat-val">1.3s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 32px 28px;">
+    <div class="lb-upload">
+      <div style="font-size: 28px; margin-bottom: 12px;">↑</div>
+      <div class="lb-upload-title">Drop your contract here</div>
+      <div class="lb-upload-sub">Supports PDF and TXT · Max 10MB</div>
+    </div>
+  </div>
+  <div class="lb-section">
+    <div class="lb-section-label">Platform Features</div>
+    <div class="lb-features">
+      <div class="lb-feat">
+        <div class="lb-feat-num">01</div>
+        <div class="lb-feat-title">Instant Analysis</div>
+        <div class="lb-feat-desc">Clauses scored in seconds using GPU-accelerated inference.</div>
+      </div>
+      <div class="lb-feat">
+        <div class="lb-feat-num" style="color:#e8291a;">02</div>
+        <div class="lb-feat-title">Risk Classification</div>
+        <div class="lb-feat-desc">Three-tier model: High, Medium, Low with confidence scores.</div>
+      </div>
+      <div class="lb-feat">
+        <div class="lb-feat-num">03</div>
+        <div class="lb-feat-title">AI Explanations</div>
+        <div class="lb-feat-desc">Plain-English breakdowns of every legal clause identified.</div>
+      </div>
+      <div class="lb-feat">
+        <div class="lb-feat-num">04</div>
+        <div class="lb-feat-title">Hybrid Scoring</div>
+        <div class="lb-feat-desc">Expert keyword rules combined with deep learning.</div>
+      </div>
+      <div class="lb-feat">
+        <div class="lb-feat-num" style="color:#e8291a;">05</div>
+        <div class="lb-feat-title">Clause Inspector</div>
+        <div class="lb-feat-desc">Drill into each clause with full text and risk metadata.</div>
+      </div>
+      <div class="lb-feat">
+        <div class="lb-feat-num">06</div>
+        <div class="lb-feat-title">Visual Analytics</div>
+        <div class="lb-feat-desc">Interactive charts for risk distribution across model methods.</div>
+      </div>
+    </div>
+  </div>
+  <div style="padding: 20px 28px; border-top: 2px solid #f0ede6; display: flex; gap: 8px; flex-wrap: wrap;">
+    <span class="lb-badge">LegalBERT</span>
+    <span class="lb-badge">PyTorch</span>
+    <span class="lb-badge">FastAPI</span>
+    <span class="lb-badge">React</span>
+    <span class="lb-badge">Gemini AI</span>
+    <span class="lb-badge">CUAD Dataset</span>
+  </div>
+</div>

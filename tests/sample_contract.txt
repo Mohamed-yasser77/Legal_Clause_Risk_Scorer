@@ -1,0 +1,16 @@
+AGREEMENT
+
+1. Parties
+This Agreement is between Company A and Company B.
+
+2. Limitation of Liability
+The total liability of Company A shall not exceed $100.
+
+3. Indemnification
+Company B shall indemnify Company A for all losses.
+
+4. Governing Law
+This Agreement is governed by the laws of California.
+
+5. Termination for Convenience
+Either party may terminate this agreement with 30 days notice.

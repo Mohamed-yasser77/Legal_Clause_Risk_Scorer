@@ -1,0 +1,21 @@
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement ("Agreement") is entered into as of January 15, 2025 ("Effective Date") by and between ServiceProvider Inc. ("Provider") and ClientCorp LLC. ("Client").
+
+1. Services Provided
+Provider agrees to deliver consulting and development services as outlined in the Statement of Work attached hereto. Provider warrants that all services will be performed in a professional and workmanlike manner.
+
+2. Confidentiality
+Both parties agree to treat all exchanged proprietary data and trade secrets as strictly confidential. Neither party shall disclose such data to any unauthorized outside entities without express written approval.
+
+3. Termination for Convenience
+Client may terminate this Agreement at any time for any reason by providing Provider with at least sixty (60) days advance written notice.
+
+4. Uncapped Liability
+NOTWITHSTANDING ANYTHING TO THE CONTRARY IN THIS AGREEMENT, THE PROVIDER'S TOTAL AGGREGATE LIABILITY ARISING FROM GROSS NEGLIGENCE, WILLFUL MISCONDUCT, OR BREACH OF CONFIDENTIALITY OBLIGATIONS SHALL BE ABSOLUTELY UNCAPPED AND UNLIMITED.
+
+5. Exclusivity
+Provider agrees that during the term of this Agreement and for a period of twelve (12) months thereafter, Provider shall not offer similar platform development services to any direct competitor of the Client.
+
+6. Non-Solicit of Employees
+During the term of this Agreement and for two (2) years after its termination, Provider shall not directly or indirectly encourage any employee of the Client to leave their employment.

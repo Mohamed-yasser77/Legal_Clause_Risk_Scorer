@@ -1,0 +1,14 @@
+streamlit
+pandas
+torch
+transformers
+numpy
+scikit-learn
+google-generativeai
+python-dotenv
+pdfplumber
+spacy
+fastapi
+uvicorn
+python-multipart
+fastapi-cors

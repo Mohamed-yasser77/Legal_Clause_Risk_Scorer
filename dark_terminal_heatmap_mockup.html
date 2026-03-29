@@ -1,0 +1,188 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
+  .dt-wrap { background: #080c0a; color: #c8f0d8; font-family: 'Space Mono', monospace; }
+  .dt-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; border-bottom: 1px solid #1a2e20; }
+  .dt-logo { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #3dffa0; letter-spacing: -1px; }
+  .dt-cursor { display: inline-block; width: 8px; height: 16px; background: #3dffa0; margin-left: 2px; animation: blink 1s step-end infinite; vertical-align: middle; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+  .dt-nav-links { display: flex; gap: 28px; font-size: 10px; color: #5a8a6a; letter-spacing: 1px; }
+  .dt-cta-nav { background: transparent; color: #3dffa0; border: 1px solid #3dffa0; padding: 8px 18px; font-family: 'Space Mono', monospace; font-size: 10px; cursor: pointer; letter-spacing: 1px; }
+  .dt-hero { padding: 56px 32px 48px; display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: start; border-bottom: 1px solid #1a2e20; }
+  .dt-prefix { font-size: 11px; color: #3dffa0; margin-bottom: 16px; letter-spacing: 1px; }
+  .dt-h1 { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800; line-height: 1.05; margin: 0 0 20px; color: #e8fff2; letter-spacing: -2px; }
+  .dt-h1 span { color: #3dffa0; }
+  .dt-sub { font-size: 11px; line-height: 1.9; color: #4a7a5a; max-width: 360px; margin-bottom: 32px; }
+  .dt-cta-row { display: flex; gap: 12px; }
+  .dt-btn-main { background: #3dffa0; color: #080c0a; border: none; padding: 14px 28px; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; cursor: pointer; letter-spacing: 1px; }
+  .dt-btn-ghost { background: transparent; color: #3dffa0; border: 1px solid #1a4a2a; padding: 13px 20px; font-family: 'Space Mono', monospace; font-size: 11px; cursor: pointer; letter-spacing: 1px; }
+  .dt-terminal { background: #040806; border: 1px solid #1a3a22; padding: 20px; font-size: 11px; line-height: 1.8; }
+  .dt-terminal-bar { display: flex; gap: 6px; margin-bottom: 16px; }
+  .dt-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dt-line-num { color: #1a4a2a; margin-right: 12px; min-width: 20px; display: inline-block; }
+  .dt-line { margin: 0; }
+  .dt-green { color: #3dffa0; }
+  .dt-yellow { color: #ffd060; }
+  .dt-red { color: #ff5050; }
+  .dt-gray { color: #3a5a42; }
+  .dt-white { color: #c8f0d8; }
+  .dt-heat { margin-top: 20px; }
+  .dt-heat-label { font-size: 9px; letter-spacing: 2px; color: #3dffa0; margin-bottom: 12px; text-transform: uppercase; }
+  .dt-heat-grid { display: grid; grid-template-columns: repeat(14, 1fr); gap: 3px; }
+  .dt-cell { height: 22px; border-radius: 2px; }
+  .dt-heat-legend { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 9px; color: #4a7a5a; }
+  .dt-heat-scale { display: flex; gap: 2px; }
+  .dt-hs { width: 14px; height: 8px; border-radius: 1px; }
+  .dt-upload { margin: 32px; border: 1px solid #1a3a22; background: #040806; padding: 40px; text-align: center; position: relative; overflow: hidden; }
+  .dt-scan-line { position: absolute; left: 0; right: 0; height: 1px; background: #3dffa0; opacity: 0.3; animation: scan 2.5s linear infinite; top: 0; }
+  @keyframes scan { 0%{top:0%} 100%{top:100%} }
+  .dt-upload-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: #e8fff2; margin-bottom: 6px; }
+  .dt-upload-sub { font-size: 10px; color: #3a5a42; letter-spacing: 1px; }
+  .dt-upload-icon { font-size: 28px; color: #3dffa0; margin-bottom: 12px; }
+  .dt-features { padding: 40px 32px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .dt-feat { border: 1px solid #0e2016; background: #040806; padding: 20px; position: relative; }
+  .dt-feat-accent { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #3dffa0; opacity: 0.4; }
+  .dt-feat-tag { font-size: 9px; letter-spacing: 2px; color: #3dffa0; text-transform: uppercase; margin-bottom: 10px; }
+  .dt-feat-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #e8fff2; margin-bottom: 8px; }
+  .dt-feat-desc { font-size: 10px; color: #4a7a5a; line-height: 1.7; }
+  .dt-tech { padding: 16px 32px; border-top: 1px solid #1a2e20; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .dt-tech-badge { font-size: 9px; letter-spacing: 1.5px; border: 1px solid #1a3a22; color: #3a6a48; padding: 5px 10px; text-transform: uppercase; }
+  .dt-stats-row { display: flex; gap: 24px; margin-top: 28px; }
+  .dt-stat { border-left: 2px solid #3dffa0; padding-left: 12px; }
+  .dt-stat-val { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: #3dffa0; }
+  .dt-stat-label { font-size: 9px; color: #4a7a5a; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+</style>
+<div class="dt-wrap">
+  <div class="dt-nav">
+    <div class="dt-logo">RISKPARSE<span class="dt-cursor"></span></div>
+    <div class="dt-nav-links">
+      <span>~/features</span>
+      <span>~/pricing</span>
+      <span>~/docs</span>
+    </div>
+    <button class="dt-cta-nav">$ analyze --now</button>
+  </div>
+  <div class="dt-hero">
+    <div>
+      <div class="dt-prefix">// AI-Powered Legal Risk Intelligence</div>
+      <div class="dt-h1">Parse.<br><span>Classify.</span><br>Protect.</div>
+      <div class="dt-sub">Feed it a contract. Get back a complete clause-by-clause risk map — heat-scored, ranked, and explained in plain English. Built on LegalBERT.</div>
+      <button class="dt-btn-main">↑ Analyze Contract</button>
+      <div class="dt-stats-row">
+        <div class="dt-stat">
+          <div class="dt-stat-val">94.2%</div>
+          <div class="dt-stat-label">Model Accuracy</div>
+        </div>
+        <div class="dt-stat">
+          <div class="dt-stat-val">1.3s</div>
+          <div class="dt-stat-label">Avg Parse Time</div>
+        </div>
+        <div class="dt-stat" style="border-color:#ff5050;">
+          <div class="dt-stat-val" style="color:#ff5050;">14</div>
+          <div class="dt-stat-label">High Risk Found</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="dt-terminal">
+        <div class="dt-terminal-bar">
+          <div class="dt-dot" style="background:#ff5f57;"></div>
+          <div class="dt-dot" style="background:#febc2e;"></div>
+          <div class="dt-dot" style="background:#28c840;"></div>
+        </div>
+        <pre class="dt-line"><span class="dt-gray">1 </span><span class="dt-green">$ riskparse</span> <span class="dt-white">NDA_client_v3.pdf</span></pre>
+        <pre class="dt-line"><span class="dt-gray">2 </span><span class="dt-gray">→ Loading LegalBERT model...</span></pre>
+        <pre class="dt-line"><span class="dt-gray">3 </span><span class="dt-green">✓ Model ready (GPU)</span></pre>
+        <pre class="dt-line"><span class="dt-gray">4 </span><span class="dt-gray">→ Parsing 18 clauses...</span></pre>
+        <pre class="dt-line"><span class="dt-gray">5 </span><span class="dt-red">! [HIGH]  §3.2 Non-Compete (10yr) — 0.92</span></pre>
+        <pre class="dt-line"><span class="dt-gray">6 </span><span class="dt-red">! [HIGH]  §7.1 Indemnification (unlimited) — 0.88</span></pre>
+        <pre class="dt-line"><span class="dt-gray">7 </span><span class="dt-yellow">~ [MED]   §4.4 IP Assignment (all works) — 0.71</span></pre>
+        <pre class="dt-line"><span class="dt-gray">8 </span><span class="dt-yellow">~ [MED]   §9.2 Governing Law (foreign) — 0.64</span></pre>
+        <pre class="dt-line"><span class="dt-gray">9 </span><span class="dt-green">✓ [LOW]   §2.1 Term (12 months) — 0.18</span></pre>
+        <pre class="dt-line"><span class="dt-gray">10</span><span class="dt-gray"> ...</span></pre>
+        <pre class="dt-line"><span class="dt-gray">11</span><span class="dt-green">✓ Done. Risk Score: </span><span class="dt-red">87/100 CRITICAL</span></pre>
+      </div>
+      <div class="dt-heat">
+        <div class="dt-heat-label">Contract heat map — 18 clauses</div>
+        <div class="dt-heat-grid">
+          <div class="dt-cell" style="background:#ff5050;opacity:0.95;"></div>
+          <div class="dt-cell" style="background:#ff5050;opacity:0.88;"></div>
+          <div class="dt-cell" style="background:#ff8c00;opacity:0.85;"></div>
+          <div class="dt-cell" style="background:#ff8c00;opacity:0.75;"></div>
+          <div class="dt-cell" style="background:#ffd060;opacity:0.9;"></div>
+          <div class="dt-cell" style="background:#ffd060;opacity:0.7;"></div>
+          <div class="dt-cell" style="background:#ffd060;opacity:0.6;"></div>
+          <div class="dt-cell" style="background:#3dffa0;opacity:0.5;"></div>
+          <div class="dt-cell" style="background:#3dffa0;opacity:0.4;"></div>
+          <div class="dt-cell" style="background:#3dffa0;opacity:0.35;"></div>
+          <div class="dt-cell" style="background:#3dffa0;opacity:0.3;"></div>
+          <div class="dt-cell" style="background:#3dffa0;opacity:0.25;"></div>
+          <div class="dt-cell" style="background:#3dffa0;opacity:0.2;"></div>
+          <div class="dt-cell" style="background:#1a3a22;opacity:0.5;"></div>
+        </div>
+        <div class="dt-heat-legend">
+          <div class="dt-heat-scale">
+            <div class="dt-hs" style="background:#ff5050;"></div>
+            <div class="dt-hs" style="background:#ff8c00;"></div>
+            <div class="dt-hs" style="background:#ffd060;"></div>
+            <div class="dt-hs" style="background:#3dffa0;"></div>
+          </div>
+          <span>High → Low risk</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 32px; border: 1px solid #1a3a22; background: #040806; padding: 40px; text-align: center; position: relative; overflow: hidden;">
+    <div class="dt-scan-line"></div>
+    <div class="dt-upload-icon">↑</div>
+    <div class="dt-upload-title">Drop your contract here</div>
+    <div class="dt-upload-sub" style="margin-top:4px;">// PDF and TXT · Max 10MB · Encrypted in transit</div>
+  </div>
+  <div class="dt-features">
+    <div class="dt-feat">
+      <div class="dt-feat-accent"></div>
+      <div class="dt-feat-tag">01 // performance</div>
+      <div class="dt-feat-title">Instant Analysis</div>
+      <div class="dt-feat-desc">GPU-accelerated inference. Clauses scored in under 1.5 seconds.</div>
+    </div>
+    <div class="dt-feat">
+      <div class="dt-feat-accent" style="background:#ff5050;"></div>
+      <div class="dt-feat-tag">02 // scoring</div>
+      <div class="dt-feat-title">Risk Classification</div>
+      <div class="dt-feat-desc">Three-tier model — High, Medium, Low — with calibrated confidence output.</div>
+    </div>
+    <div class="dt-feat">
+      <div class="dt-feat-accent"></div>
+      <div class="dt-feat-tag">03 // explain</div>
+      <div class="dt-feat-title">AI Explanations</div>
+      <div class="dt-feat-desc">Gemini AI translates legal jargon into plain English per clause.</div>
+    </div>
+    <div class="dt-feat">
+      <div class="dt-feat-accent" style="background:#ffd060;"></div>
+      <div class="dt-feat-tag">04 // hybrid</div>
+      <div class="dt-feat-title">Hybrid Scoring</div>
+      <div class="dt-feat-desc">Expert keyword rules + deep learning. Robust across contract types.</div>
+    </div>
+    <div class="dt-feat">
+      <div class="dt-feat-accent"></div>
+      <div class="dt-feat-tag">05 // inspect</div>
+      <div class="dt-feat-title">Clause Inspector</div>
+      <div class="dt-feat-desc">Full text + metadata drill-down on every clause in the document.</div>
+    </div>
+    <div class="dt-feat">
+      <div class="dt-feat-accent" style="background:#3dffa0;"></div>
+      <div class="dt-feat-tag">06 // visual</div>
+      <div class="dt-feat-title">Visual Analytics</div>
+      <div class="dt-feat-desc">Interactive heat maps and charts for risk distribution across the document.</div>
+    </div>
+  </div>
+  <div class="dt-tech">
+    <span style="font-size:9px;color:#2a4a32;letter-spacing:2px;text-transform:uppercase;margin-right:4px;">// built with</span>
+    <span class="dt-tech-badge">LegalBERT</span>
+    <span class="dt-tech-badge">PyTorch</span>
+    <span class="dt-tech-badge">FastAPI</span>
+    <span class="dt-tech-badge">React</span>
+    <span class="dt-tech-badge">Gemini AI</span>
+    <span class="dt-tech-badge">CUAD Dataset</span>
+  </div>
+</div>

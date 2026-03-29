@@ -1,0 +1,28 @@
+# Python Virtual Environments
+venv/
+env/
+.env
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+frontend/node_modules/
+.npm/
+
+# IDE
+.vscode/
+.idea/
+
+# Large Files & Data
+models/
+data/
+*.zip
+*.bin
+*.pth
+*.pt
+legal_risk_model.zip
+
+# Logs & Outputs
+test_output.txt
+*.log
